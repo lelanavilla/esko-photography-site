@@ -1,0 +1,9 @@
+.booking-background-color {
+    background-image: black;
+}
+
+.booking-background-pic {
+    background-image: url(https://i.imgur.com/45cLJlK.png);
+    width: 600px;
+    height: 500px;
+}
