@@ -1,3 +1,16 @@
+import React from 'react'
+import VideosList from './VideosList.js';
+// import './videos.css';
+
+function Videos() {
+  return (
+    <div>
+      <VideosList />
+    </div>
+    
+  )
+}
+export default Videos;
 // import React from 'react';
 // import VideosList from './VideosList';
 // import jquery from 'jquery';
@@ -209,16 +222,5 @@
 //     )
 // }
 // export default Videos
-import React from 'react'
-import VideosList from './VideosList.js';
 
-function Videos(props) {
-  return (
-    <div>
-      <VideosList />
-    </div>
-    
-  )
-}
 
-export default Videos;
