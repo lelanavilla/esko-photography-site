@@ -51,39 +51,36 @@ if (this.props.loading){
 <div className="booking-page">
   <div className="container">
   <div id="contact_header">
-    <h3>Contact Us to Schedule a Booking</h3>
+    <h3 id="contact-us">Contact Us to Schedule a Booking</h3>
   <br/>
-    <div id="contact_form">
+  <div id="contact_form">
     
-      <form data-netlify="true" name="booking-form"action="POST_BOOKING" method="post" onSubmit={this.handleSubmit}> 
-      <fieldset>
-          <div className="form-input" >
-          <input onChange={this.handleChange}type="text" name="name" id="name" placeholder="Name" required />
-            </div>
-          <div>
-           
-            <input onChange={this.handleChange} type="text" name="email" id="email" placeholder="Email"/>
-            </div>
-          <div>
-            <input onChange={this.handleChange} placeholder="Best Number to Reach You" type="text" name="phone" id="phone" />
+    <form data-netlify="true" name="booking-form" className="booking-form" action="POST_BOOKING" method="post" onSubmit={this.handleSubmit}> 
+    <fieldset>
+        <div className="form-input" >
+        <input onChange={this.handleChange}type="text" className="booking-input" name="name" id="name" placeholder="Name" required />
           </div>
-          <div>
-  
-            <textarea onChange={this.handleChange} placeholder="Message" type="text" name="comment" id="comment" className="required" ></textarea>
+        <div>
+         
+          <input onChange={this.handleChange} className="booking-input" type="text" name="email" id="email" placeholder="Email"/>
           </div>
-         <div> 
-           <button> Submit</button>
-          </div>
-       </fieldset>
-      </form>
-    </div>
+        <div>
+          <input onChange={this.handleChange} className="booking-input" placeholder="Best Number to Reach You" type="text" name="phone" id="phone" />
+    
+          {/* <textarea onChange={this.handleChange} className="booking-textarea" placeholder="Message" type="text" name="comment" id="comment"></textarea> */}
+        </div>
+       <div> 
+         <button id="booking-btn"> Submit</button>
+        </div>
+     </fieldset>
+    </form>
   </div>
-  </div>
-  {display}
-  </div>
-  )
-}
-}
+</div>
+</div>
+{display}
+</div>
+)
+}}
 const mapStateToProps = state =>{
  return state.bookings;
 
