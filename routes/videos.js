@@ -11,7 +11,7 @@ videosRouter.get("/", (req, res) => {
     })
 })
 //add video
-.post('/videos', (req, res) => {
+.post('/api/videos', (req, res) => {
     const newVideo = new VideosModel(req.body);
     newVideo.save((err, addedVideo) => {
         if (err) return res.send(err);
@@ -29,7 +29,7 @@ videosRouter.get("/", (req, res) => {
 // })
 
 //delete one video
-videosRouter.delete("/videos/:id",(req, res) => {
+videosRouter.delete("/api/videos/:id",(req, res) => {
     videosModel.findOneAndRemove({ _id: req.params.id }, (err, deletedvideo) => {
         if (err)res.status(404).send(err)
         if (!deletedVideo) return res.status(404)

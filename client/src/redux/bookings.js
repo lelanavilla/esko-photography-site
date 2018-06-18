@@ -47,7 +47,7 @@ export const bookingsReducer = (state = initialState, action) => {
 
 export const getBookings = () => {
     return dispatch => {
-        axios.get('/bookings').then(response => {
+        axios.get('/api/bookings').then(response => {
             dispatch({
                 type: "GET_BOOKINGS",
                 bookings: response.data
@@ -64,7 +64,7 @@ export const getBookings = () => {
 }
 export function postBooking(newBooking) {
     return dispatch => {
-        axios.post('/bookings', newBooking)
+        axios.post('/api/bookings', newBooking)
             .then(response => {
                 dispatch({
                     type: "POST_BOOKING",

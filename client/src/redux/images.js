@@ -34,7 +34,7 @@ export const imagesReducer = (state = initialState, action) => {
 
 export function getImages(){
     return dispatch =>{
-        axios.get('/images').then(response =>{
+        axios.get('/api/images').then(response =>{
             dispatch({
                 type: "GET_IMAGES",
                 images:response.data
@@ -51,7 +51,7 @@ export function getImages(){
 }
 export function postImage (newImage) {
     return dispatch =>{
-        axios.post('/images', newImage)
+        axios.post('/api/images', newImage)
         .then(response =>{
             dispatch({
                 type:"POST_IMAGE",

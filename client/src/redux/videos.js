@@ -36,7 +36,7 @@ export const videosReducer = (state = initialState, action) => {
 
 export function getVideos(){
     return dispatch =>{
-        axios.get('./videos').then(response =>{
+        axios.get('./api/videos').then(response =>{
             dispatch({
                 type: "GET_VIDEOS",
                 videos:response.data
@@ -53,7 +53,7 @@ export function getVideos(){
 }
 export function postVideo (newVideo) {
     return dispatch =>{
-        axios.post('./videos', newVideo)
+        axios.post('./api/videos', newVideo)
         .then(response =>{
             dispatch({
                 type:"POST_VIDEO",
