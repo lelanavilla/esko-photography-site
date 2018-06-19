@@ -2,7 +2,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+require('dotenv').config;
 const path= require("path");
+
 
 // const logger = require("./middleware/logger.js");
 const app = express();
